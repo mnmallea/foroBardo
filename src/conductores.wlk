@@ -8,3 +8,9 @@ object fantino{
 	}
 }
 
+object polino{
+	method hacerOpinarDeChimentosA(unPanelista){
+		unPanelista.calmarse(5)
+		unPanelista.tomarAgua()
+	}
+}
