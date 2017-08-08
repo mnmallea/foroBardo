@@ -11,7 +11,7 @@ object horacioPagani{
 	method tomarAgua(){
 		self.disminuirNivelEnojo(0.1*nivelEnojo)
 	}
-	method calmarse(){
+	method calmarse(minutos){
 		if(!self.estaCaliente()){
 			nivelEnojo=0
 		}

@@ -1,0 +1,21 @@
+import conductores.*
+import panelistas.*
+
+describe "test de conductores"{
+	test "fantino hace opinar a pagani, empieza con enojo 0 y debe terminar con enojo=0"{
+		horacioPagani.nivelEnojo(0)
+		fantino.hacerOpinarDeDeportesA(horacioPagani)
+		assert.equals(0, horacioPagani.nivelEnojo())
+	}
+	test "fantino hace opinar a pagani, empieza con enojo 100 y debe terminar con enojo 89,1"{
+		horacioPagani.nivelEnojo(100)
+		fantino.hacerOpinarDeDeportesA(horacioPagani)
+		assert.equals(89.1, horacioPagani.nivelEnojo())
+	}
+	test "fantino hace opinar de deportes a totiPasman, empieza con soberbia 20 y termina con soberbia 10 y sin sed"{
+		totiPasman.soberbia(20)
+		fantino.hacerOpinarDeDeportesA(totiPasman)
+		assert.equals(10,totiPasman.soberbia())
+		assert.notThat(totiPasman.tieneSed())
+	}
+}
