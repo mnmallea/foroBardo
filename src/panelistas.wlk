@@ -56,3 +56,26 @@ object totiPasman{
 		soberbia -= unaCantidad
 	}
 }
+
+object lizzyTagliani{
+	var humor
+	
+	method humor(nuevoHumor){
+		humor = nuevoHumor
+	}
+	method humor() = humor
+	method tomarAgua(){
+		self.aumentarHumor(humor)
+	}
+	method calmarse(minutos){
+		if(self.estaDeMalHumor()){
+			self.aumentarHumor(minutos)
+		}
+	}
+	method aumentarHumor(unaCantidad){
+		humor += unaCantidad
+	}
+	method estaDeMalHumor(){
+		return humor < 0
+	}
+}
