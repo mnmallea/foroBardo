@@ -4,6 +4,7 @@ object horacioPagani{
 	method nivelEnojo(unNivel){
 		nivelEnojo = unNivel
 	}
+	method nivelEnojo() = nivelEnojo
 	method elevarVoz(){
 		self.aumentarNivelEnojo(10)
 	}

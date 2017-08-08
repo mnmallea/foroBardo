@@ -1,0 +1,29 @@
+import panelistas.*
+
+describe "horacioPagani"{
+	test "Horacio eleva la voz y pasa a 20 de nivelDeEnojo"{
+		horacioPagani.nivelEnojo(10)
+		horacioPagani.elevarVoz()
+		assert.equals(20, horacioPagani.nivelEnojo())
+	}
+	test "Horacio toma agua, empieza en 100 de nivel de enojo y queda en 90"{
+		horacioPagani.nivelEnojo(100)
+		horacioPagani.tomarAgua()
+		assert.equals(90, horacioPagani.nivelEnojo())
+	}
+	test "Horacio tiene nivelEnojo=21 (esta caliente) e intenta calmarse, debe quedar en 20"{
+		horacioPagani.nivelEnojo(21)
+		horacioPagani.calmarse()
+		assert.equals(21, horacioPagani.nivelEnojo())
+	}
+	test "Horacio tiene nivelEnojo=15 y se debe calmar"{
+		horacioPagani.nivelEnojo(15)
+		horacioPagani.calmarse()
+		assert.equals(0, horacioPagani.nivelEnojo())
+	}
+	test "Horacio tiene nivelEnojo=100 e intenta bajar 200, debe quedar en 0"{
+		horacioPagani.nivelEnojo(100)
+		horacioPagani.disminuirNivelEnojo(200)
+		assert.equals(0, horacioPagani.nivelEnojo())
+	}
+}
