@@ -1,4 +1,4 @@
-import panelistas.*
+import panelistas.horacioPagani
 
 describe "horacioPagani"{
 	test "Horacio eleva la voz y pasa a 20 de nivelDeEnojo"{

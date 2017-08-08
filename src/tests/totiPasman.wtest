@@ -1,0 +1,26 @@
+import panelistas.totiPasman
+
+describe "totiPasman"{
+	test "toti empieza sin sed y soberbia=0, eleva la voz y tiene sed y soberbia=10"{
+		totiPasman.tieneSed(false)
+		totiPasman.soberbia(0)
+		totiPasman.elevarVoz()
+		assert.that(totiPasman.tieneSed())
+		assert.equals(10,totiPasman.soberbia())
+	}
+	test "totiPasman tiene sed y toma agua, luego ya no tiene sed"{
+		totiPasman.tieneSed(true)
+		totiPasman.tomarAgua()
+		assert.notThat(totiPasman.tieneSed())
+	}
+	test "totiPasman no tiene sed y toma agua, sigue sin tener sed"{
+		totiPasman.tieneSed(false)
+		totiPasman.tomarAgua()
+		assert.notThat(totiPasman.tieneSed())
+	}
+	test "totiPasman tiene 20 de soberbia, se calma 5 minutos y debe quedar con 10"{
+		totiPasman.soberbia(20)
+		totiPasman.calmarse(5)
+		assert.equals(10,totiPasman.soberbia())
+	}
+}
