@@ -1,0 +1,19 @@
+import panelistas.lizzyTagliani
+
+describe "lizzyTagliani"{
+	test "lizzy tiene 15 de humor, toma agua y pasa a 30"{
+		lizzyTagliani.humor(15)
+		lizzyTagliani.tomarAgua()
+		assert.equals(30,lizzyTagliani.humor())
+	}
+	test "lizzy esta de buen humor y se calma 10 minutos, queda todo igual"{
+		lizzyTagliani.humor(5)
+		lizzyTagliani.calmarse(10)
+		assert.equals(5,lizzyTagliani.humor())
+	}
+	test "lizzy esta de mal humor (-10) y se calma 10 minutos, queda en humor 0"{
+		lizzyTagliani.humor(-10)
+		lizzyTagliani.calmarse(10)
+		assert.equals(0,lizzyTagliani.humor())
+	}
+}
