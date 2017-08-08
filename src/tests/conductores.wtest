@@ -18,4 +18,17 @@ describe "test de conductores"{
 		assert.equals(10,totiPasman.soberbia())
 		assert.notThat(totiPasman.tieneSed())
 	}
+	
+	test "fantino hace opinar de deportes a lizzy, pero tira error"{
+		assert.throwsException({
+			lizzyTagliani.humor(10)
+			fantino.hacerOpinarDeDeportesA(lizzyTagliani)
+		})
+	}
+	
+	test "polino hace opinar de chimentos a lizzy, empieza con humor 0 y termina con 0"{
+		lizzyTagliani.humor(0)
+		polino.hacerOpinarDeChimentosA(lizzyTagliani)
+		assert.equals(0,lizzyTagliani.humor())
+	}
 }
