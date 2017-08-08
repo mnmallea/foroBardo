@@ -26,3 +26,33 @@ object horacioPagani{
 		return nivelEnojo > 20
 	}
 }
+
+object totiPasman{
+	var soberbia
+	var tieneSed
+	
+	method soberbia(nuevaSoberbia){
+		soberbia = nuevaSoberbia
+	}
+	method soberbia() = soberbia
+	method tieneSed(nuevaSed){
+		tieneSed = nuevaSed
+	}
+	method tieneSed() = tieneSed
+	method elevarVoz(){
+		self.aumentarSoberbia(10)
+		tieneSed = true
+	}
+	method tomarAgua(){
+		tieneSed = false
+	}
+	method calmarse(minutos){
+		self.disminuirSoberbia(2*minutos)
+	}
+	method aumentarSoberbia(unaCantidad){
+		soberbia += unaCantidad
+	}
+	method disminuirSoberbia(unaCantidad){
+		soberbia -= unaCantidad
+	}
+}
