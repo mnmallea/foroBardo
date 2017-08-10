@@ -31,4 +31,15 @@ describe "test de conductores"{
 		polino.hacerOpinarDeChimentosA(lizzyTagliani)
 		assert.equals(0,lizzyTagliani.humor())
 	}
+	test "polino hace opinar de chimentos a totiPasman, empieza con 20 de soberbia y termina con 10 y sin sed"{
+		totiPasman.soberbia(20)
+		polino.hacerOpinarDeChimentosA(totiPasman)
+		assert.equals(10, totiPasman.soberbia())
+		assert.notThat(totiPasman.tieneSed())
+	}
+	test "polino hace opinar de chimentos a pagani, empieza con enojo=100 y termina con 90"{
+		horacioPagani.nivelEnojo(100)
+		polino.hacerOpinarDeChimentosA(horacioPagani)
+		assert.equals(90,horacioPagani.nivelEnojo())
+	}
 }
